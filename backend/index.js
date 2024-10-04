@@ -8,8 +8,14 @@ const { calculateAverageRating } = require('./utils/utils.js');
 
 const app = express();
 
-app.use(cors()); 
+// CORS Options
+const corsOptions = {
+  origin: ['https://movie-rating-client-dusky.vercel.app', 'http://localhost:3000'],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // if you want to include credentials with requests
+};
 
+app.use(cors(corsOptions)); 
 app.use(express.json());
 
 // MongoDB connection
