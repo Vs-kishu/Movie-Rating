@@ -12,7 +12,6 @@ const app = express();
 const corsOptions = {
   origin: ['https://movie-rating-client-dusky.vercel.app', 'http://localhost:3000'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true, // if you want to include credentials with requests
 };
 
 app.use(cors(corsOptions)); 
